@@ -14,6 +14,7 @@ MONOPOLY_GAME = { deeds: {
                     boardwalk: { price: 400, rent: 50 },
                     atlantic: { price: 260, rent: 22 },
                     baltic: { price: 60, rent: 4 }
+
                   },
                   cards:
                    [ 'Go To Jail',
@@ -23,16 +24,31 @@ MONOPOLY_GAME = { deeds: {
                   tokens: [ :thimble, :car, :horse, :hat, :wheelbarrow ]
                 }
 
-
 # 1. Implement the method below
 def number_of_tokens
-  # Your Code Goes here
+  result = MONOPOLY_GAME[:tokens].length
 end
 
 # 2. Implement the method below.
 def sorted_list_of_tokens
-  # Your Code Goes here
+  result = MONOPOLY_GAME[:tokens].sort
 end
+
+def rent_for(input)
+    result =MONOPOLY_GAME[:deeds][input][:rent]
+  end
+
+  def price_for(input)
+    result =MONOPOLY_GAME[:deeds][input][:price]
+  end
+
+  def count_number_of_monopoly_cards
+    result =MONOPOLY_GAME[:cards].count
+  end
+
+  def pick_free_parking_card
+    result=MONOPOLY_GAME[:cards][1]
+  end
 
 
 # 3. Now, define as many more methods as needed to make all the tests pass:
